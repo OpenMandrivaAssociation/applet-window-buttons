@@ -1,5 +1,3 @@
-%global orig_name org.kde.windowbuttons
-
 Name:           applet-window-buttons
 Version:        0.9.0
 Release:        1
@@ -8,6 +6,7 @@ License:        GPLv2+
 URL:            https://github.com/psifidotos/applet-window-buttons
 Source0:        https://github.com/psifidotos/applet-window-buttons/archive/%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:  appstream
 BuildRequires:  cmake
 BuildRequires:  cmake(ECM)
 BuildRequires:  cmake(KDecoration2) 
@@ -51,12 +50,7 @@ support Plasma panels.
 
 %files
 %license LICENSE
-#dir %{_kf5_datadir}/plasma/plasmoids/org.kde.windowbuttons
-#{_kf5_datadir}/plasma/plasmoids/org.kde.windowbuttons
-#{_qt5_qmldir}/org/kde/appletdecoration
-#{_kf5_datadir}/kservices5/plasma-applet-%{orig_name}.desktop
-#{_kf5_metainfodir}/%{orig_name}.appdata.xml
-
-#{_kf5_datadir}/plasma/plasmoids/%{orig_name}/metadata.desktop
-#{_kf5_datadir}/plasma/plasmoids/%{orig_name}/contents/
-#{_kf5_datadir}/plasma/plasmoids/%{orig_name}/metadata.json
+%{_libdir}/qml/org/kde/appletdecoration/
+%{_datadir}/kservices5/plasma-applet-org.kde.windowbuttons.desktop
+%{_datadir}/metainfo/org.kde.windowbuttons.appdata.xml
+%{_datadir}/plasma/plasmoids/org.kde.windowbuttons
