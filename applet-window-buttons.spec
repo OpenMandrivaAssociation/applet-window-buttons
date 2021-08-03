@@ -1,6 +1,6 @@
 Name:           applet-window-buttons
 Version:        0.9.0
-Release:        1
+Release:        2
 Summary:        Plasma 5 applet to show window buttons in panels
 License:        GPLv2+
 URL:            https://github.com/psifidotos/applet-window-buttons
