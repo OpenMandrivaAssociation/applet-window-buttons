@@ -8,6 +8,7 @@ Source0:        https://github.com/psifidotos/applet-window-buttons/archive/%{ve
 
 BuildRequires:  appstream
 BuildRequires:  cmake
+BuildRequires:	ninja
 BuildRequires:  cmake(ECM)
 BuildRequires:  cmake(KDecoration2) 
 BuildRequires:  cmake(Qt5Core)
@@ -40,17 +41,16 @@ support Plasma panels.
 
 %prep
 %autosetup -n %{name}-%{version}
+%cmake_kde5
 
 %build
-%cmake
-%make_build
+%ninja_build -C build
 
 %install
-%make_install -C build
+%ninja_install -C build
 
 %files
 %license LICENSE
-%{_libdir}/qml/org/kde/appletdecoration/
-%{_datadir}/kservices5/plasma-applet-org.kde.windowbuttons.desktop
+%{_libdir}/qt5/qml/org/kde/appletdecoration/
 %{_datadir}/metainfo/org.kde.windowbuttons.appdata.xml
 %{_datadir}/plasma/plasmoids/org.kde.windowbuttons
