@@ -54,3 +54,4 @@ support Plasma panels.
 %{_libdir}/qt5/qml/org/kde/appletdecoration/
 %{_datadir}/metainfo/org.kde.windowbuttons.appdata.xml
 %{_datadir}/plasma/plasmoids/org.kde.windowbuttons
+%{_datadir}/kservices5/plasma-applet-org.kde.windowbuttons.desktop
